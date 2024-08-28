@@ -79,7 +79,7 @@ Completed
   - Soluzione: Esegui lo script con privilegi di amministratore.
 
 - **Errori durante l'installazione**:
-  - Se un certificato non viene installato correttamente, lo script mostrer� l'errore specifico prodotto da `certmgr.exe`.
+  - Se un certificato non viene installato correttamente, lo script mostrerà l'errore specifico prodotto da `certmgr.exe`.
   - Soluzione: Leggi l'output dell'errore per diagnosticare e risolvere il problema. Assicurati che il certificato sia valido e che il formato sia corretto.
 
 ## Licenza
