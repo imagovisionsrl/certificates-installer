@@ -2,7 +2,7 @@
 
 ## Descrizione
 
-`CertInstall Tool` è uno script batch per installare certificati `.der` nelle Trusted Root Certification Authorities e nelle Intermediate Certification Authorities di Windows. Questo script � particolarmente utile per automatizzare l'aggiunta di certificati in ambienti gestiti o per la distribuzione in massa.
+`CertInstall Tool` è uno script batch per installare certificati `.der` nelle Trusted Root Certification Authorities e nelle Intermediate Certification Authorities di Windows. Questo script è particolarmente utile per automatizzare l'aggiunta di certificati in ambienti gestiti o per la distribuzione in massa.
 
 ## Prerequisiti
 
