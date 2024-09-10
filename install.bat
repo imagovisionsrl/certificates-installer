@@ -29,9 +29,9 @@ Pause
 goto :eof
 
 :InstallCertificates
-for %%f in (%~dp0%1\*.der) do (
+for %%f in ("%~dp0%1\*.der") do (
     <nul set /p=Installing: %%~nxf... 
-    certmgr.exe -add %%f -s -r localMachine %2 >temp_output.txt 2>&1
+    certmgr.exe -add "%%f" -s -r localMachine %2 >temp_output.txt 2>&1
     if errorlevel 0 (
         echo OK
         del temp_output.txt
