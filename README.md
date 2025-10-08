@@ -42,7 +42,7 @@ CertInstallTool/
 
 3. **Output Atteso**:
    - Lo script installerà i certificati e mostrerà un messaggio `OK` per ogni certificato installato con successo.
-   - In caso di errore, verrà mostrato l'output di `certmgr.exe` per diagnosticare il problema.
+   - In caso di errore, verrà mostrato l'output di `certutil` per diagnosticare il problema.
 
 ## Output dello Script
 
@@ -79,7 +79,7 @@ Completed
   - Soluzione: Esegui lo script con privilegi di amministratore.
 
 - **Errori durante l'installazione**:
-  - Se un certificato non viene installato correttamente, lo script mostrerà l'errore specifico prodotto da `certmgr.exe`.
+  - Se un certificato non viene installato correttamente, lo script mostrerà l'errore specifico prodotto da `certutil`.
   - Soluzione: Leggi l'output dell'errore per diagnosticare e risolvere il problema. Assicurati che il certificato sia valido e che il formato sia corretto.
 
 ## Licenza

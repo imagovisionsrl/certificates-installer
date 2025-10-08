@@ -13,13 +13,13 @@ echo.
 echo =====================[ ROOT CA ]=====================
 echo.
 
-call :InstallCertificates root root
+call :InstallCertificates "root" "Root"
 
 echo.
 echo ==================[ INTERMEDIATE CA ]================
 echo.
 
-call :InstallCertificates intermediate CA
+call :InstallCertificates "intermediate" "CA"
 
 echo.
 echo =================[ PROCESS COMPLETE ]=================
@@ -31,14 +31,16 @@ goto :eof
 :InstallCertificates
 for %%f in ("%~dp0%1\*.der") do (
     <nul set /p=Installing: %%~nxf... 
-    certmgr.exe -add "%%f" -s -r localMachine %2 >temp_output.txt 2>&1
-    if errorlevel 0 (
-        echo OK
-        del temp_output.txt
-    ) else (
+    certutil -f -addstore "%2" "%%f" > "%~dp0temp_output.txt" 2>&1
+    
+    if errorlevel 1 (
         echo.
         echo [ERROR] CertMgr Failed:
-        type temp_output.txt
+        type "%~dp0temp_output.txt"
+        REM non cancellare il file log per debug
+    ) else (
+        echo OK
+        del "%~dp0temp_output.txt"
     )
 )
 echo.
